@@ -60,10 +60,10 @@ jobs:
         run: python -m venv venv && source venv/bin/activate && pip3 install -r requirements.txt
         if: steps.cache-venv.outputs.cache-hit != 'true'
 
-      - name: Run tests
-        # Note that you have to activate the virtualenv in every step
-        # Because GitHub actions doesn't preserve the environment
-        run: . venv/bin/activate && pytest
+#      - name: Run tests
+#        # Note that you have to activate the virtualenv in every step
+#        # Because GitHub actions doesn't preserve the environment
+#        run: . venv/bin/activate && pytest
       - name: Create archive of dependencies
         run: /
           cd ./venv/lib/python3.8/site-packages
