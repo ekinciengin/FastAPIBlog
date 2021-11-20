@@ -1,4 +1,5 @@
 name: FastAPI CI/CD
+
 on:
   workflow_dispatch:
     inputs:
@@ -11,7 +12,6 @@ on:
         required: false
         default: 'The Octoverse'
 
-on:
   # Trigger the workflow on push
   push:
     branches:
