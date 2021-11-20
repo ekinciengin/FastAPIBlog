@@ -1,4 +1,15 @@
 name: FastAPI CI/CD
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Person to greet'
+        required: true
+        default: 'Mona the Octocat'
+      home:
+        description: 'location'
+        required: false
+        default: 'The Octoverse'
 
 on:
   # Trigger the workflow on push
@@ -14,6 +25,9 @@ jobs:
     # Define the runner used in the workflow
     runs-on: ubuntu-latest
     steps:
+      - run: |
+          echo "Hello ${{ github.event.inputs.name }}!"
+          echo "- in ${{ github.event.inputs.home }}!"
       # Check out repo so our workflow can access it
       - uses: actions/checkout@v2
 
