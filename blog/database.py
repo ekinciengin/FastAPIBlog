@@ -33,7 +33,7 @@ def get_db_postgresql():
             password="Welcome1245")
 
         # create a cursor
-        cur = conn.cursor()
+        cur = connection.cursor()
 
         # execute a statement
         print('PostgreSQL database version:')

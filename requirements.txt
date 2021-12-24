@@ -26,3 +26,4 @@ urllib3
 six
 certifi
 jose
+psycopg2
