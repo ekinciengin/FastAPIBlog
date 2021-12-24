@@ -8,7 +8,7 @@ class BlogBase(BaseModel):
 
 
 class Blog(BlogBase):
-    class Config():
+    class Config:
         orm_mode = True
 
 
@@ -23,7 +23,7 @@ class ShowUser(BaseModel):
     email: str
     blogs: List[Blog] = []
 
-    class Config():
+    class Config:
         orm_mode = True
 
 
@@ -32,7 +32,7 @@ class ShowBlog(BaseModel):
     body: str
     creator: ShowUser
 
-    class Config():
+    class Config:
         orm_mode = True
 
 
