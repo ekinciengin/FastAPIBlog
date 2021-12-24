@@ -1,4 +1,4 @@
-from jose import jwt
+from jose import jwt, JWTError
 from typing import Optional
 from datetime import datetime, timedelta
 from blog import schemas

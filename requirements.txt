@@ -15,7 +15,14 @@ Jinja2
 setuptools
 docutils
 passlib
-python-jose
 python-multipart
 mangum
 pytest
+toml
+wheel
+cryptography
+py
+urllib3
+six
+certifi
+jose
