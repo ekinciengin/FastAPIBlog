@@ -8,7 +8,7 @@ router = APIRouter(
     prefix="/blog",
     tags=['Blogs']
 )
-get_db = database.get_db
+get_db = database.get_db_postgresql()
 
 
 @router.post('/', status_code=status.HTTP_201_CREATED)

@@ -12,5 +12,5 @@ router = APIRouter(
 
 
 @router.post('/')
-def login(request: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(database.get_db)):
+def login(request: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(database.get_db_postgresql())):
     return authentication.login(request, db)

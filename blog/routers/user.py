@@ -9,7 +9,7 @@ router = APIRouter(
     tags=["Users"]
 )
 
-get_db = database.get_db
+get_db = database.get_db_postgresql()
 
 
 @router.post('/', response_model=schemas.ShowUser)
